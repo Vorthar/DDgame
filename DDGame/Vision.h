@@ -3,13 +3,16 @@ class Vision{
 public:
 	Vision();
 	~Vision();
-
+	
 	bool hasVis();
-	void alterVis();
 	int getRange();
-	void setRange(int value);
+
+	void setVis(bool hasVis, int range);
 private:
 	bool state;
 	int range;
+
+	void alterVis(bool value);
+	void setRange(int value);
 };
 

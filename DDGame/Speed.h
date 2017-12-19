@@ -4,9 +4,15 @@ class Speed{
 		Speed();
 		~Speed();
 
+		int getBaseSPD();
 		int getSpeed();
-		void setSpeed(unsigned int value);
+
+		void updateSpeed(float encumb[2], float cWeight);
 	private:
-		unsigned int spd;
+		int basespd;
+		int spd;
+
+		void setBaseSPD(int value);
+		void setSpeed(int value);
 };
 

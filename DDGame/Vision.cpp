@@ -11,8 +11,8 @@ Vision::~Vision()
 bool Vision::hasVis(){
 	return state;
 }
-void Vision::alterVis(){
-	state = !state;
+void Vision::alterVis(bool value){
+	state = value;
 }
 
 int Vision::getRange(){
@@ -20,4 +20,9 @@ int Vision::getRange(){
 }
 void Vision::setRange(int value){
 	range = value;
+}
+
+void Vision::setVis(bool hasVis, int range) {
+	alterVis(hasVis);
+	setRange(range);
 }

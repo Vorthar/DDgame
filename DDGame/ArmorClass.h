@@ -1,12 +1,15 @@
 #pragma once
+#include"Armor.h"
 class ArmorClass{
 	public:
 		ArmorClass();
 		~ArmorClass();
 
 		int getAC();
-		void setAC(int value);
+		void update(Armor* theItem, int dexScore);
+		//stuff to do
 	private:
-		unsigned int ac;
+		int ac;
+		void setAC(int value);
 };
 
